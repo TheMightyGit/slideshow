@@ -1,7 +1,4 @@
-//go:build marvscript
-// +build marvscript
-
-package code
+package cartridge
 
 import (
 	"image"
