@@ -5,7 +5,6 @@ import (
 	"image"
 
 	"github.com/TheMightyGit/marv/marvlib"
-	"github.com/TheMightyGit/marv/marvtypes"
 )
 
 //go:embed "resources/*"
@@ -37,7 +36,7 @@ func Start() {
 	area := marvlib.API.MapBanksGet(MapBankPics).AllocArea(image.Point{1, 1}) // 1x1 at 256x256 tiles
 	area.Clear(0, 0)
 	for i := GfxBankGfx1; i <= GfxBankEnd; i++ {
-		marv.Sprites[i].ChangePos(image.Rectangle{
+		marvlib.API.SpritesGet(i).ChangePos(image.Rectangle{
 			Min: image.Point{X: 256, Y: 0}, // off screen at the start
 			Max: image.Point{X: 512, Y: 0},
 		})
