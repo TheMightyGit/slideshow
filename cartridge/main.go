@@ -44,7 +44,7 @@ func Start() {
 		marvlib.API.SpritesGet(i).Show(i, area)
 	}
 
-	marvlib.API.SfxBanks(0).PlayLooped()
+	marvlib.API.SfxBanksGet(0).PlayLooped()
 }
 
 var (
