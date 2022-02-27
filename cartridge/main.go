@@ -1,6 +1,7 @@
 package cartridge
 
 import (
+	"embed"
 	"image"
 
 	"github.com/TheMightyGit/marv/marvlib"
